@@ -17,6 +17,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: '/views/charts.html',
             controller: 'chartsController'
         })
+				.state('abono', {
+            url: '/abono',
+            templateUrl: '/views/abono.html',
+            controller: 'abonoController'
+        })
 				.state('admin', {
             url: '/admin',
             templateUrl: '/views/admin.html',

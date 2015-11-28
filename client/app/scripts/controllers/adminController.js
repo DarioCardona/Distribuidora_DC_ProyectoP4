@@ -13,4 +13,8 @@ angular.module('AngularScaffold.Controllers')
       $state.go('facturacion');
     }
 
+          $scope.goabono = function(){
+        $state.go('abono');
+        }
+
   }]);

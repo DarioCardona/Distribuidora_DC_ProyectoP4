@@ -72,6 +72,31 @@ html, body, .container-table {
   color:black;
 }
 
+
+#body_abono{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('carros/img6.jpg');
+}
+
+
+#abono{
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  background-color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  margin: 150px;
+  font-weight: bolder;
+  background-color: black;
+  color: white;
+}
+#letra{
+  color:black;
+}
+
+
 //DAVID
 
 #devobutt{
