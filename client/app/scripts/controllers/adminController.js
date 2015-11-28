@@ -9,4 +9,8 @@ angular.module('AngularScaffold.Controllers')
           $state.go('abono');
           }
 
+          $scope.gotocharts = function(){
+            $state.go('charts');
+          }
+
   }]);
