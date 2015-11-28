@@ -38,11 +38,10 @@ h3{
 
 }
 
-.divs{
+#Facturas, #Devoluciones, #Usuarios, #Abonos, #Compras, #Dei{
   opacity: 0.6;
   filter: alpha(opacity=60);
   border: solid 5px;
-  margin-top: 200px;
   height: 250px;
   background-color: #ffffff;
   text-align: center;
@@ -50,7 +49,18 @@ h3{
   //background-color: black;
 }
 
+html, body, .container-table {
+    height: 100%;
+}
 
+.container-table {
+    display: table;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
 
 #user_bt{
   margin-top: 5px;
@@ -186,4 +196,68 @@ position: fixed;
 
 #text_bar_cant{
   width: 230px;
+}
+
+#divDARIOV{
+  margin-top: 10%;
+  background-color: rgba(255,255,255,0.50);
+  padding: 5%;
+}
+
+.center-block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#button_search{
+  float: left;
+  display: inline-block;
+  padding: 2px;
+}
+
+#input_search{
+  float: left;
+  display: inline-block;
+  padding: 2px;
+}
+
+#icon_search{
+  float: left;
+  display: inline-block;
+  line-height: 30px;
+  padding: 2px;
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.table-center{
+  text-align: right;
+}
+
+.tablaDario{
+    border: 1px solid white;
+    background: rgba(255,255,255,0.5);
+}
+
+body{
+  background-image: url("carros/img1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#input_search_text{
+  -webkit-border-radius: 30px !important;
+  -moz-border-radius: 30px !important;
+  border-radius: 30px !important;
+  -webkit-border-top: 30px !important;
+    -moz-border-top: 30px !important;
+    border-top: 30px !important;
+    -webkit-border-bottom: 30px !important;
+    -moz-border-bottom: 30px !important;
+    border-bottom: 30px !important;
+}
+
+.row{
+  margin: 10px;
 }
