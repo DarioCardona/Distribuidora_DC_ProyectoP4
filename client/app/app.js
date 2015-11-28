@@ -27,15 +27,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl: '/views/admin.html',
             controller: 'adminController'
         })
-                .state('facturacion', {
-            url: '/facturacion',
+        .state('facturacion', {
+        		url: '/facturacion',
             templateUrl: '/views/facturacion.html',
             controller: 'facturacionController',
             data: {
               pageTitle: 'Distribuidora de Carros - Facturación'
             }
         })
-                .state('compras', {
+        .state('compras', {
             url: '/compras',
             templateUrl: '/views/compras.html',
             controller: 'comprasController',
@@ -43,4 +43,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
               pageTitle: 'Distribuidora de Carros - Compras'
             }
         })
-}])
+				.state('devo', {
+            url: '/Devoluciones',
+            templateUrl: '/views/devo.html',
+            controller: 'devoController'
+        });
+}]);

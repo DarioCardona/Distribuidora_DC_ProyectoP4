@@ -12,9 +12,8 @@ angular.module('AngularScaffold.Controllers')
     $scope.gofacturacion = function(){
       $state.go('facturacion');
     }
-
-          $scope.goabono = function(){
-        $state.go('abono');
-        }
+    $scope.gotodevo = function(){
+      $state.go('devo');
+    }
 
   }]);
