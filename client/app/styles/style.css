@@ -204,7 +204,7 @@ position: fixed;
 #divDARIOV{
   background-color: rgba(0,0,0,0.50);
   padding: 1%;
-  margin: 5%;
+  margin-top: 10%;
 }
 
 #body_facturacion{
@@ -215,7 +215,8 @@ position: fixed;
 }
 
 .vertical-center-row-DARIOV {
-    vertical-align: middle;
+  vertical-align: middle;
+  top: 40%;
 }
 
 .center-block{
