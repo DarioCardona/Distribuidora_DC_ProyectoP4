@@ -1,7 +1,8 @@
 var highcharts = angular.module('highcharts', ["highcharts-ng"]);
 
 angular.module('AngularScaffold.Controllers')
-  .controller('chartsController', ['$state','$scope', 'chartsService', function ($state,$scope, chartsService) {
+  .controller('chartsController', ['$state','$scope', 'chartsService', 'indexService', function ($state,$scope, chartsService, indexService) {
+    indexService.setTitle("Graficos");
     var factData = [{Total: 750, Dia: 01},{Total: 921, Dia: 02},{Total: 50, Dia: 03},{Total: 310, Dia: 04},{Total: 230, Dia: 05},{Total: 1050, Dia: 06},{Total: 0, Dia: 07},{Total: 750, Dia: 09},{Total: 2050, Dia: 10}];
     var myseries = [];
     for(var i = 0; i < factData.length; i++){
