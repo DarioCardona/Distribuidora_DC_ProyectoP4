@@ -19,7 +19,7 @@ db.once('open', function callback() {
     console.log("Connection with database succeeded.");
 });
 
-server.register(inert, function(err){
+server.register([inert,auth], function(err){
 
   server.auth.strategy('session', 'cookie', {
     password: 'secretpasswordforencryption',

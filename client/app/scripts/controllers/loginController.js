@@ -1,5 +1,6 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('loginController', ['$state','$scope', 'loginService', 'indexService', function ($state,$scope, loginService, indexService) {
+  .controller('loginController', ['$state','$scope', 'loginService', 'indexService', '$rootScope', '$sessionStorage'
+   function ($state,$scope, loginService, indexService, $rootScope, $sessionStorage) {
 
   	indexService.setTitle("Distribuidora DC");
       /*$scope.goadmin = function(){
@@ -7,7 +8,7 @@ angular.module('AngularScaffold.Controllers')
       }*/
       $scope.user = {};
       $scope.$sessionStorage = $sessionStorage;
-      
+
       $scope.logout = function(){
         authService.Logout().then(function(response){
           alert('logged out correctly');
@@ -29,5 +30,5 @@ angular.module('AngularScaffold.Controllers')
 
   }]);
 
-  angular.module('AngularScaffold.Controllers')
-    .controller('NavbarController', ['AuthService', '$scope', '$rootScope', '$sessionStorage',  function (authService, $scope, $rootScope, $sessionStorage) {
+  //angular.module('AngularScaffold.Controllers')
+  //  .controller('NavbarController', ['AuthService', '$scope', '$rootScope', '$sessionStorage',  function (authService, $scope, $rootScope, $sessionStorage) {
