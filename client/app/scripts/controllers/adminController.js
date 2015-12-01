@@ -1,5 +1,5 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('adminController', ['$state','$scope', 'adminService', function ($state,$scope, adminService) {
+  .controller('adminController', ['$state','$scope', 'adminService', 'indexService', function ($state,$scope, adminService, indexService) {
     $scope.gousuario = function(){
       $state.go('usuario');
     }
@@ -12,9 +12,9 @@ angular.module('AngularScaffold.Controllers')
     $scope.gofacturacion = function(){
       $state.go('facturacion');
     }
+    $scope.gotodevo = function(){
+      $state.go('devo');
+    }
 
-          $scope.goabono = function(){
-        $state.go('abono');
-        }
-
+    indexService.setTitle("Bienvenido!");
   }]);
