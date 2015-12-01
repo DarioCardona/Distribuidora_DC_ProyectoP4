@@ -13,7 +13,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', function($
             controller: 'loginController',
             name: "login",
             data: {
-              pageTitle: 'Distribuidora de Carros'
+              pageTitle: 'Distribuidora DC'
             }
         })
 				.state('charts', {
@@ -21,7 +21,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', function($
             templateUrl: '/views/charts.html',
             controller: 'chartsController',
             data: {
-              pageTitle: 'Distribuidora de Carros - Graficas'
+              pageTitle: 'Distribuidora DC - Graficas'
             }
         })
 				.state('abono', {
@@ -29,7 +29,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', function($
             templateUrl: '/views/abono.html',
             controller: 'abonoController',
             data: {
-              pageTitle: 'Distribuidora de Carros - Abonos'
+              pageTitle: 'Distribuidora DC - Abonos'
             }
         })
 				.state('admin', {
@@ -37,7 +37,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', function($
             templateUrl: '/views/admin.html',
             controller: 'adminController',
             data: {
-              pageTitle: 'Distribuidora de Carros - Bienvenido'
+              pageTitle: 'Distribuidora DC - Bienvenido'
             }
         })
         .state('facturacion', {
@@ -45,7 +45,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', function($
             templateUrl: '/views/facturacion.html',
             controller: 'facturacionController',
             data: {
-              pageTitle: 'Distribuidora de Carros - Facturas'
+              pageTitle: 'Distribuidora DC - Facturas'
             }
         })
         .state('compras', {
@@ -53,7 +53,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', function($
             templateUrl: '/views/compras.html',
             controller: 'comprasController',
             data: {
-              pageTitle: 'Distribuidora de Carros - Compras'
+              pageTitle: 'Distribuidora DC - Compras'
             }
         })
 				.state('devo', {
@@ -61,7 +61,15 @@ app.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', function($
             templateUrl: '/views/devo.html',
             controller: 'devoController',
             data: {
-              pageTitle: 'Distribuidora de Carros - Devoluciones'
+              pageTitle: 'Distribuidora DC - Devoluciones'
+            }
+        })
+				.state('usuario', {
+            url: '/usuario',
+            templateUrl: '/views/usuario.html',
+            controller: 'usuarioController'
+						data: {
+              pageTitle: 'Distribuidora DC - Usuarios'
             }
         })
         .state('index', {
