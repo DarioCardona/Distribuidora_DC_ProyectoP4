@@ -1,6 +1,8 @@
-var homeController = require('./controllers/homeController');
-var studentsController = require('./controllers/studentsController');
+var loginController = require('./controllers/loginController');
+var usuarioController = require('./controllers/usuarioController');
 
-exports.endpoints = [{method: 'GET', path: '/{param*}', config: homeController.home},
-					 {method: 'GET', path: '/v1/students', config: studentsController.getStudents},
-           {method: 'POST', path: '/v1/student', config: studentsController.createStudent}];
+
+
+exports.endpoints = [{method: 'GET', path: '/{param*}', config: loginController.login},
+					 {method: 'GET', path: '/v1/usuarios', config: usuarioController.getusuario},
+           {method: 'POST', path: '/usuario', config: usuarioController.createusuario}];
