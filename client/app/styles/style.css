@@ -44,12 +44,12 @@ h3{
   text-align: center;
   filter: brightness(50%);
   //background-color: black;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(255,255,255,0.6);
 }
 
 #user_bt{
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 
 html, body, .container-table {
@@ -99,6 +99,9 @@ html, body, .container-table {
   color:black;
 }
 
+#create_user{
+  margin: 150px;
+}
 
 //DAVID
 
@@ -278,29 +281,4 @@ position: fixed;
 
 .row{
   margin: 10px;
-}
-
-#body_usuario{
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-image: url('carros/img3.jpg');
-}
-
-#table{
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-  background-color: #ffffff;
-}
-#create_user{
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-  background-color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  background-color: black;
-  color:white;
-}
-.texto{
-  color:black;
 }
