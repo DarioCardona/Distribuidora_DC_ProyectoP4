@@ -56,20 +56,20 @@ app.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', function($
               pageTitle: 'Distribuidora DC - Compras'
             }
         })
+				.state('usuario', {
+            url: '/usuario',
+            templateUrl: '/views/usuario.html',
+            controller: 'usuarioController',
+            data: {
+              pageTitle: 'Distribuidora DC - Usuario'
+            }
+        })
 				.state('devo', {
             url: '/Devoluciones',
             templateUrl: '/views/devo.html',
             controller: 'devoController',
             data: {
               pageTitle: 'Distribuidora DC - Devoluciones'
-            }
-        })
-				.state('usuario', {
-            url: '/usuario',
-            templateUrl: '/views/usuario.html',
-            controller: 'usuarioController'
-						data: {
-              pageTitle: 'Distribuidora DC - Usuarios'
             }
         })
         .state('index', {
@@ -98,7 +98,7 @@ app.directive('updateTitle', ['$rootScope', '$timeout',
 
         var listener = function(event, toState) {
 
-          var title = 'Distribuidora de Carros - Bienvenido!';
+          var title = 'Distribuidora DC - Bienvenido!';
           if (toState.data && toState.data.pageTitle) title = toState.data.pageTitle;
 
           $timeout(function() {
