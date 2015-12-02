@@ -9,15 +9,6 @@ angular.module('AngularScaffold.Controllers')
       $scope.user = {};
       $scope.$sessionStorage = $sessionStorage;
 
-      $scope.logout = function(){
-        authService.Logout().then(function(response){
-          alert('logged out correctly');
-          $sessionStorage.$reset();
-        }).catch(function(err){
-          alert(err.data.error + " " + err.data.message);
-        })
-      }
-
       $scope.login = function(user){
         authService.Login(user).then(function(response){
           $sessionStorage.currentUser = response.data;
