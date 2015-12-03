@@ -10,7 +10,7 @@ exports.getusuario = {
 
 exports.createusuario = {
   auth: {
-      mode:'try',
+      mode:'required',
       strategy:'session',
       //scope: ['admin']
     },

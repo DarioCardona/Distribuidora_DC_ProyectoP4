@@ -41,7 +41,7 @@ angular.module('AngularScaffold.Controllers')
      	if ($state.current.name !== "login")
      		$scope.boolLogOut = true;
 	   return $scope.boolLogOut;
-	 };
+	 }
 
    $scope.isAdmin = function(){
        return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('admin') > -1;
@@ -49,6 +49,6 @@ angular.module('AngularScaffold.Controllers')
 
    $scope.isRegular = function(){
        return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('regular') > -1;
-   }
+   };
 
   }]);
