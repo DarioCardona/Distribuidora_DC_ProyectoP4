@@ -1,13 +1,13 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('indexController', ['authService''$state','$scope', 'indexService','navbarService','$rootScope', '$sessionStorage',
-  function (authService,$state,$scope, indexService,navbarService, $rootScope, $sessionStorage) {
+  .controller('indexController', ['AuthService','$state','$scope', 'indexService','navbarService','$rootScope', '$sessionStorage',
+  function (AuthService,$state,$scope, indexService,navbarService, $rootScope, $sessionStorage) {
 
     $scope.boolLogOut = false;
     $scope.user = {};
     $scope.$sessionStorage = $sessionStorage;
 
     $scope.logout = function(){
-      authService.Logout().then(function(response){
+      AuthService.Logout().then(function(response){
         alert('logged out correctly');
         $sessionStorage.$reset();
         $state.go('login');
