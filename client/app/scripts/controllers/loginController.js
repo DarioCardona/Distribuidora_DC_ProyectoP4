@@ -3,9 +3,9 @@ angular.module('AngularScaffold.Controllers')
    function ($state,$scope, loginService, indexService, $rootScope, $sessionStorage) {
 
   	indexService.setTitle("Distribuidora DC");
-      /*$scope.goadmin = function(){
+      $scope.goadmin = function(){
         $state.go('admin');
-      }*/
+      }
       $scope.user = {};
       $scope.$sessionStorage = $sessionStorage;
 

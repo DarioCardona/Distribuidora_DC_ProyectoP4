@@ -9,11 +9,11 @@ exports.getusuario = {
 }
 
 exports.createusuario = {
-  auth: {
+  /*auth: {
       mode:'required',
       strategy:'session',
       //scope: ['admin']
-    },
+    },*/
   handler: function(request, reply){
     var newusuario = new usuario({
       scope : request.payload.user_user,

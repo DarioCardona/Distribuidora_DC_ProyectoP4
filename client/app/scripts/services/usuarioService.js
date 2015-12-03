@@ -2,7 +2,7 @@ angular.module('AngularScaffold.Services').factory('usuarioService', ['$http',
 	function($http){
 		return {
 				Getusuario: function(){
-					return $http.get("/usuario");
+					return $http.get("/usuarios");
 				},
 				Postusuario: function(payload){
 					console.log(payload);
