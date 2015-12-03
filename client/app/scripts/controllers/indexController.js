@@ -1,8 +1,8 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('indexController', ['$state','$scope', 'indexService','navbarService','$rootScope', '$sessionStorage',
-  function ($state,$scope, indexService,navbarService, $rootScope, $sessionStorage) {
-  	$scope.boolLogOut = false;
+  .controller('indexController', ['authService''$state','$scope', 'indexService','navbarService','$rootScope', '$sessionStorage',
+  function (authService,$state,$scope, indexService,navbarService, $rootScope, $sessionStorage) {
 
+    $scope.boolLogOut = false;
     $scope.user = {};
     $scope.$sessionStorage = $sessionStorage;
 
@@ -19,9 +19,6 @@ angular.module('AngularScaffold.Controllers')
   	$scope.gofacturacion = function(){
   		$state.go('facturacion');
     }
-
-    //$scope.logOut = function(){
-    //}
 
     $scope.gograficas = function(){
       $state.go('charts');
@@ -49,6 +46,6 @@ angular.module('AngularScaffold.Controllers')
 
    $scope.isRegular = function(){
        return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('regular') > -1;
-   };
+   }
 
   }]);
