@@ -10,9 +10,9 @@ exports.getusuario = {
 
 exports.createusuario = {
   auth: {
-      mode:'require',
+      mode:'try',
       strategy:'session',
-      scope: ['admin']
+      //scope: ['admin']
     },
   handler: function(request, reply){
     var newusuario = new usuario({
@@ -33,4 +33,4 @@ exports.createusuario = {
     }
     return reply('ok');
   }
-}
+};

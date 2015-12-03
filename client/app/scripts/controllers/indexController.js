@@ -1,5 +1,5 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('indexController', ['$state','$scope', 'indexService','navbarService','$rootScope', '$sessionStorage'
+  .controller('indexController', ['$state','$scope', 'indexService','navbarService','$rootScope', '$sessionStorage',
   function ($state,$scope, indexService,navbarService, $rootScope, $sessionStorage) {
   	$scope.boolLogOut = false;
 

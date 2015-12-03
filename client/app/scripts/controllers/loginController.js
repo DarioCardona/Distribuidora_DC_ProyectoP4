@@ -1,5 +1,5 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('loginController', ['$state','$scope', 'loginService', 'indexService', '$rootScope', '$sessionStorage'
+  .controller('loginController', ['$state','$scope', 'loginService', 'indexService', '$rootScope', '$sessionStorage',
    function ($state,$scope, loginService, indexService, $rootScope, $sessionStorage) {
 
   	indexService.setTitle("Distribuidora DC");
