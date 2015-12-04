@@ -13,18 +13,20 @@ angular.module('AngularScaffold.Controllers')
           authService.Login(user).then(function(response){
           $sessionStorage.currentUser = response.data;
           $scope.user = {};
-          //console.log("QUE?1111");
-          //console.log($sessionStorage.currentUser.scope);
+          console.log($sessionStorage.currentUser.nombre);
+          console.log($sessionStorage.length);
+          if($sessionStorage.currentUser.nombre === ""){
+            console.log("empty");
+            $scope.boollog = true;
+          }
+          if($scope.boollog == false){
+              $state.go('admin');
+          }else{
+            alert("Error");
+          }
         }).catch(function(err){
-          alert(err.data.error + " " + err.data.message);
-          $scope.boollog = true;
+          console.log((err.data.error + " " + err.data.message));
         });
-        if($sessionStorage.length != 0){
-            //console.log("QUE?2222");
-            $state.go('admin');
-        }else{
-          alert("Error");
-        }
       }
 
   }]);
