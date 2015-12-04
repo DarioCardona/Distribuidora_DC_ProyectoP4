@@ -5,7 +5,8 @@ angular.module('AngularScaffold.Services').factory('AuthService', ['$http',
 					return $http.get("/logout");
 				},
 				Login: function(payload){
-					return $http.post("/login", payload);
+					//console.log("aqui");
+					return $http.post("login", payload);
 				}
 	    };
 }]);

@@ -5,6 +5,12 @@ angular.module('AngularScaffold.Controllers')
     $scope.boolLogOut = false;
     $scope.user = {};
     $scope.$sessionStorage = $sessionStorage;
+    $scope.booladmin = false;
+
+    /*$scope.isAdmin = function(){
+       $scope.booladmin = $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('Administrador') > -1;
+       console.console.log($sessionStorage.currentUser.scope);
+    }*/
 
     $scope.logout = function(){
       AuthService.Logout().then(function(response){
@@ -21,15 +27,31 @@ angular.module('AngularScaffold.Controllers')
     }
 
     $scope.gograficas = function(){
-      $state.go('charts');
+      $scope.booladmin = $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('Administrador') > -1;
+      if($scope.booladmin){
+          $state.go('charts');
+      }else{
+        alert('No tiene los permisos necesarios');
+      }
+
     }
 
     $scope.godevoluciones = function(){
-      $state.go('devo');
+      $scope.booladmin = $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('Administrador') > -1;
+      if($scope.booladmin){
+          $state.go('devo');
+      }else{
+        alert('No tiene los permisos necesarios');
+      }
     }
 
     $scope.goabonos = function(){
-      $state.go('abono');
+      $scope.booladmin = $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('Administrador') > -1;
+      if($scope.booladmin){
+          $state.go('abono');
+      }else{
+        alert('No tiene los permisos necesarios');
+      }
     }
 
     $scope.indexService = indexService;
@@ -39,13 +61,5 @@ angular.module('AngularScaffold.Controllers')
      		$scope.boolLogOut = true;
 	   return $scope.boolLogOut;
 	 }
-
-   $scope.isAdmin = function(){
-       return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('admin') > -1;
-   }
-
-   $scope.isRegular = function(){
-       return $sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('regular') > -1;
-   }
 
   }]);

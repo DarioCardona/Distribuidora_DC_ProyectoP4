@@ -1,6 +1,7 @@
 var usuario = require('../schemas/usuario');
 var SHA3 = require("crypto-js/sha3");
 var boom = require("Boom");
+
 exports.getusuario = {
   handler: function(request, reply){
     var usuario = usuario.find({});
@@ -26,11 +27,13 @@ exports.createusuario = {
       tabla : request.payload.user_tabla,
       zona : request.payload.user_zona
     });
-    newusuario.save();
-    console.log('usuario saved');
-    if(err){
-      return reply(boom.notAcceptable("Error" + err));
-    }
-    return reply('ok');
+    newusuario.save(function(err){
+      if(err){
+        return reply(boom.notAcceptable("Error" + err));
+      }
+      console.log('usuario saved');
+      return reply('ok');
+    });
+
   }
 };

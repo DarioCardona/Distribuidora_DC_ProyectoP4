@@ -16,17 +16,19 @@ exports.login = {
       usuario.find({nombre: request.payload.nombre, password: password}, function(err, usuario){
           console.log(usuario);
           console.log(err)
+          console.log("llego");
           if(!err){
             if(usuario.length > 0){
               request.auth.session.set(usuario[0]);
               return reply({nombre: usuario[0].nombre, scope: usuario[0].scope});
             }
-            return reply(boom.unauthorized('Contraseña o usario invalido(s)'));
+            return reply(boom.unauthorized('Contraseña o usuario invalido(s)'));
           }
           return reply(boom.notAcceptable('Error Executing Query'));
       });
     }
 };
+
 exports.logout = {
     auth: {
       mode:'required',
