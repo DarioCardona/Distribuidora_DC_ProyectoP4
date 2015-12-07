@@ -1,4 +1,4 @@
-var app = angular.module('AngularScaffold', ['ui.router', 'AngularScaffold.Services', 'AngularScaffold.Controllers', 'ngRoute']);
+var app = angular.module('AngularScaffold', ['ui.router', 'AngularScaffold.Services', 'AngularScaffold.Controllers', 'ngRoute', 'ngStorage']);
 var highcharts = angular.module('highcharts', ["highcharts-ng"]);
 
 angular.module('AngularScaffold.Controllers', []);

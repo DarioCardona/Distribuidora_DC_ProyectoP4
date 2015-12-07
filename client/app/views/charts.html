@@ -2,44 +2,50 @@
   <div id = "chartsmaindiv">
       <div id = "filtersbox" class = "container">
         <div class = "row">
-            <div class = " col-xs-offset-1"></div>
-            <div class = "col-xs-2">
+            <div class = "col-xs-5">
               <div class="dropdown" id = "drop1">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id = "zonabutt">
                     Zona
                 <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Tegucigalpa</a></li>
-                    <li><a href="#">Danli</a></li>
-                    <li><a href="#">Olancho</a></li>
-                    <li><a href="#">Norte</a></li>
-                    <li><a href="#">Sur</a></li>
+                  <ul class="dropdown-menu" id = "dropZonas">
+                    <li><a>Tegucigalpa</a></li>
+                    <li><a>Danli</a></li>
+                    <li><a>Olancho</a></li>
+                    <li><a>Norte</a></li>
+                    <li><a>Sur</a></li>
                   </ul>
               </div>
             </div>
-            <div class = "col-xs-3 col-xs-offset-1"></div>
-            <div class = "col-xs-2">
+            <div class = "col-xs-2"></div>
+            <div class = "col-xs-5">
               <div class="dropdown" id = "drop2">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id = "mesbutt">
                     Mes
                   <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Enero</a></li>
-                    <li><a href="#">Febrero</a></li>
-                    <li><a href="#">Marzo</a></li>
-                    <li><a href="#">Abril</a></li>
-                    <li><a href="#">Mayo</a></li>
-                    <li><a href="#">Junio</a></li>
-                    <li><a href="#">Julio</a></li>
-                    <li><a href="#">Agosto</a></li>
-                    <li><a href="#">Septiembre</a></li>
-                    <li><a href="#">Octubre</a></li>
-                    <li><a href="#">Noviembre</a></li>
-                    <li><a href="#">Diciembre</a></li>
+                  <ul class="dropdown-menu" id = "dropMes">
+                    <li><a>Enero</a></li>
+                    <li><a>Febrero</a></li>
+                    <li><a>Marzo</a></li>
+                    <li><a>Abril</a></li>
+                    <li><a>Mayo</a></li>
+                    <li><a>Junio</a></li>
+                    <li><a>Julio</a></li>
+                    <li><a>Agosto</a></li>
+                    <li><a>Septiembre</a></li>
+                    <li><a>Octubre</a></li>
+                    <li><a>Noviembre</a></li>
+                    <li><a>Diciembre</a></li>
                   </ul>
                 </div>
-                <div class = " col-xs-offset-1"></div>
+                <!--<div class = " col-xs-offset-1"></div>-->
               </div>
+          </div>
+        </div>
+        <div class = "container" id = "mainbutt">
+          <div class = "row">
+            <div  id = "visuabutcont">
+              <button id = "Visbutt" type="button" class="btn btn-success" aria-label="Left Align">Visualizar</button>
+            </div>
           </div>
         </div>
       <div id = "divchart" class = "container">
@@ -51,7 +57,12 @@
         </div>
       </div>
       <div id = "divchart3" class = "container">
-        <div id = "chart3"></div>
+        <div class = "col-xs-12 col-md-6">
+          <div id = "chart3"></div>
+        </div>
+        <div class = "col-xs-12 col-md-6">
+          <div id = "chart4"></div>
+        </div>
       </div>
     </div>
     </div>

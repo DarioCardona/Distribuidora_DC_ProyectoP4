@@ -1,19 +1,41 @@
 angular.module('AngularScaffold.Controllers')
-  .controller('adminController', ['$state','$scope', 'adminService', 'indexService', function ($state,$scope, adminService, indexService) {
+  .controller('adminController', ['AuthService','$state','$scope', 'adminService', 'indexService','$rootScope', '$sessionStorage',
+   function (AuthService,$state,$scope, adminService, indexService, $rootScope, $sessionStorage) {
+
     $scope.gousuario = function(){
-      $state.go('usuario');
+      if($sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('Administrador') > -1){
+          $state.go('usuario');
+      }else{
+        alert('No tiene los permisos necesarios');
+      }
     }
+
     $scope.goabono = function(){
-      $state.go('abono');
+      if($sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('Administrador') > -1){
+          $state.go('abono');
+      }else{
+        alert('No tiene los permisos necesarios');
+      }
     }
+
     $scope.gotocharts = function(){
-      $state.go('charts');
+      if($sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('Administrador') > -1){
+          $state.go('charts');
+      }else{
+        alert('No tiene los permisos necesarios');
+      }
     }
+
     $scope.gofacturacion = function(){
       $state.go('facturacion');
     }
+
     $scope.gotodevo = function(){
-      $state.go('devo');
+      if($sessionStorage.currentUser && $sessionStorage.currentUser.scope.indexOf('Administrador') > -1){
+          $state.go('devo');
+      }else{
+        alert('No tiene los permisos necesarios');
+      }
     }
 
     indexService.setTitle("Bienvenido!");
